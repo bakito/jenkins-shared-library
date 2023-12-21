@@ -7,11 +7,9 @@ group 'com.six_group.ocp'
 version '1.0-SNAPSHOT'
 
 repositories {
-
-    mavenCentral()
-    // maven {
-    //   url "https://artifactory.six-group.net/artifactory/torrent"
-    //}
+    maven { url "https://plugins.gradle.org/m2" }
+    maven { url "https://repo.jenkins-ci.org/public" }
+    maven { url "https://repo.maven.apache.org/maven2" }
 }
 
 dependencies {
@@ -34,12 +32,12 @@ sourceSets {
     main {
         groovy {
             // all code files will be in either of the folders
-            srcDirs = ["src", "vars"]
+            srcDirs = ['src', 'vars']
         }
     }
     test {
         groovy {
-            srcDirs = ["test"]
+            srcDirs = ['test']
         }
     }
 }
@@ -47,3 +45,5 @@ sourceSets {
 jenkinsPlugin {
     jenkinsVersion = "2.401.3"
 }
+
+// https://medium.com/disney-streaming/testing-jenkins-shared-libraries-4d4939406fa2

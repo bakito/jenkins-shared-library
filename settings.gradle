@@ -1,2 +1,11 @@
+pluginManagement {
+    resolutionStrategy {
+    }
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+}
 rootProject.name = 'jenkins-shared-library'
 
