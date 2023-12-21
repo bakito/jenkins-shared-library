@@ -1,6 +1,0 @@
-<pre>
-getNamespace()
-</pre>
-
-<h4>Features</h4>
-Returns the current OpenShift namespace

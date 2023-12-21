@@ -10,18 +10,16 @@ version '1.0-SNAPSHOT'
 repositories {
 
     mavenCentral()
-   // maven {
-     //   url "https://artifactory.six-group.net/artifactory/torrent"
+    // maven {
+    //   url "https://artifactory.six-group.net/artifactory/torrent"
     //}
 }
 
 dependencies {
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.21'
-    compile group: 'com.cloudbees', name: 'groovy-cps', version: '1.29'
-    compile group: 'org.jenkins-ci.main', name: 'jenkins-core', version: '2.176.3'
+    compile group: 'org.jenkins-ci.main', name: 'jenkins-core', version: '2.426.1'
     compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
 
-    jenkinsPlugins group: 'io.fabric8.jenkins.plugins', name: 'openshift-sync', version: '1.0.41'
     jenkinsPlugins group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '1.20'
     jenkinsPlugins group: 'com.openshift.jenkins.plugins', name: 'openshift-client', version: '1.0.32'
     jenkinsPlugins group: 'com.cloudbees.jenkins.plugins', name: 'custom-tools-plugin', version: '0.6'
@@ -38,12 +36,12 @@ sourceSets {
     main {
         groovy {
             // all code files will be in either of the folders
-            srcDirs = ['src', 'vars']
+            srcDirs = ["src", "vars"]
         }
     }
     test {
         groovy {
-            srcDir 'test'
+            srcDirs = ["test"]
         }
     }
 }
