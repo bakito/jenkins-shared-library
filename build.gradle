@@ -23,7 +23,7 @@ dependencies {
     implementation group: 'com.openshift.jenkins.plugins', name: 'openshift-client', version: '1.1.0.420.v8817277c1990'
     implementation group: 'org.csanchez.jenkins.plugins', name: 'kubernetes', version: '4151.v6fa_f0fb_0b_4c9'
 
-    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.8.0'
     testImplementation group: 'com.lesfurets', name: 'jenkins-pipeline-unit', version: '1.1'
     testImplementation group: 'javax.servlet', name: 'servlet-api', version: '2.5'
