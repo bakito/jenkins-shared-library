@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.apache.groovy:groovy:4.0.16'
+    implementation group: 'org.apache.groovy', name: 'groovy', version: '4.0.16'
     implementation group: 'javax.servlet', name: 'servlet-api', version: '2.5'
 
     implementation group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '642.v737c34dea_6c2'
