@@ -29,6 +29,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - name: Test with Gradle
-      uses: gradle/gradle-build-action@v2.6.0
+      uses: gradle/gradle-build-action@v2.11.1
       with:
         arguments: test
