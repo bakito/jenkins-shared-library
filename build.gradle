@@ -1,7 +1,6 @@
 plugins {
     id 'groovy'
-    id 'org.jenkins-ci.jpi' version '0.27.0'
-    id 'net.saliman.cobertura' version '2.6.0'
+    id 'org.jenkins-ci.jpi' version '0.50.0'
 }
 
 group 'com.six_group.ocp'
@@ -16,20 +15,19 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.21'
-    compile group: 'org.jenkins-ci.main', name: 'jenkins-core', version: '2.426.1'
-    compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    implementation 'org.apache.groovy:groovy:4.0.14'
+    implementation group: 'javax.servlet', name: 'servlet-api', version: '2.5'
 
-    jenkinsPlugins group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '1.20'
-    jenkinsPlugins group: 'com.openshift.jenkins.plugins', name: 'openshift-client', version: '1.0.32'
-    jenkinsPlugins group: 'com.cloudbees.jenkins.plugins', name: 'custom-tools-plugin', version: '0.6'
-    jenkinsPlugins group: 'org.csanchez.jenkins.plugins', name: 'kubernetes', version: '1.12.8'
+    implementation group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '642.v737c34dea_6c2'
+    implementation group: 'com.cloudbees.jenkins.plugins', name: 'custom-tools-plugin', version: '0.8'
+    implementation group: 'com.openshift.jenkins.plugins', name: 'openshift-client', version: '1.1.0.420.v8817277c1990'
+    implementation group: 'org.csanchez.jenkins.plugins', name: 'kubernetes', version: '4151.v6fa_f0fb_0b_4c9'
 
-    testCompile group: 'junit', name: 'junit', version: '4.13.1'
-    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.+'
-    testCompile group: 'com.lesfurets', name: 'jenkins-pipeline-unit', version: '1.1'
-    testCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
-    testCompile group: 'org.spockframework', name: 'spock-core', version: "1.3-groovy-2.4"
+    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.8.0'
+    testImplementation group: 'com.lesfurets', name: 'jenkins-pipeline-unit', version: '1.1'
+    testImplementation group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.3-groovy-4.0'
 }
 
 sourceSets {
@@ -46,6 +44,6 @@ sourceSets {
     }
 }
 
-cobertura {
-    coverageFormats = ['xml']
+jenkinsPlugin {
+    jenkinsVersion = "2.401.3"
 }
