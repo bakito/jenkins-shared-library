@@ -1,0 +1,8 @@
+<pre>
+getClusterVersion(boolean fullVersion = false)
+</pre>
+
+<h4>Features</h4>
+Returns the version of the OpenShift cluster
+If fullVersion ist set to false (default) the major.minor version is returned else the full version
+

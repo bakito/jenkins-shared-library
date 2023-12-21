@@ -1,0 +1,22 @@
+<pre>
+connectToOpenshiftProject(Map config, Closure body)
+</pre>
+
+<h4>Features</h4>
+Connect to a given OpenShift cluster and namespace using the specified crendentialsId (optional).
+
+<h4>Important</h4>
+<pre>
+- To use this function the cluster needs to be configured in your jenkins server.
+- An egress proxy may be needed (and declared as environment variable in your Jenkinsfile)
+- Credentials may be empty. In this case the default user is used.
+</pre>
+<h4>Examples</h4>
+
+<h4>Rollout</h4>
+
+<pre>
+connectToOpenshiftProject(cluster: 'non-prod', project: 'my-namespace', credentialsId: 'my-token-id'){
+    openshift.selector("dc", "my-deployment-config").rollout().latest()
+}
+</pre>

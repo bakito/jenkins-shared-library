@@ -1,0 +1,38 @@
+<pre>
+@Library('six-jenkins-shared-library') _
+
+deployApplication(String changeNo, String namespace, String gitRepo, String gitTag, String gitUser, String gitPass)
+deployApplication(String changeNo, String namespace, String gitRepo, String gitTag, String secretName)
+</pre>
+
+<h4>Features</h4>
+Deploys and Undeploys everything into the given namespace configured in the according Unit-of-Work located in the given git repository and tag.
+
+<h4>Important</h4>
+To use this function the pipeline has to load the shared library via annotation at the beginning of the script.
+
+<h4>Input Parameters</h4>
+<ul>
+ <li>changeNo: The change number registered in ITSM / BMC</li>
+ <li>namespace: The name of the projects to deploy.</li>
+ <li>gitRepo: The repository where the Unit-of-Work is located
+ <pre>
+    Format:
+      - ssh://.../<project>/<repo>
+      - /<project>/<repo>
+    </pre></li>
+ <li>gitTag: The tag or branch of the Unit-of-Work to deploy (both are applicable)</li>
+ <li>gitUser: The username for the repository</li>
+ <li>gitPass: The password for the repository</li>
+ <li>secretName: The name of the secret for the repository - only for non-production deployment</li>
+</ul>
+<h4>Examples</h4>
+
+<h4>Run with custom configuration</h4>
+<pre>
+@Library('six-jenkins-shared-library') _
+
+....
+
+deployApplication('CHG00123456', 'blueprint', 'ssh://git@stash.six-group.net:22/opspoc/pipeline-blueprint-spring-boot.git', '0.0.1', 'bitbucket-secret')
+</pre>

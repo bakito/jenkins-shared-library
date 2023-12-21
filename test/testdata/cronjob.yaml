@@ -1,0 +1,24 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: test-application
+spec:
+  concurrencyPolicy: Allow
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            parent: test-application
+        spec:
+          containers:
+          - command:
+            - /bin/sh
+            image: artifactory.six-group.net/sdbi/six-rhel7:latest
+            imagePullPolicy: IfNotPresent
+            name: test-application
+          restartPolicy: OnFailure
+  schedule: 00 23 * * *
+  successfulJobsHistoryLimit: 3
+  suspend: true

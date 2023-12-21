@@ -1,0 +1,9 @@
+<pre>
+getInitialJobContext()
+</pre>
+
+<h4>Features</h4>
+Returns an intitial job context map
+
+<h4>Input Parameters</h4>
+@param: (optional) withVersion: if true, a timestamp build version is added to the currentBuildVersion varible, default: true

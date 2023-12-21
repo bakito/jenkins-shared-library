@@ -1,0 +1,37 @@
+<pre>
+@Library('six-jenkins-shared-library') _
+
+uow2helm(String gitRepo, String gitTag, String gitUser, String gitPass)
+uow2helm(String gitRepo, String gitTag, String secretName)
+</pre>
+
+<h4>Features</h4>
+Converts uow deployments to a helm 3 chart
+
+<h4>Important</h4>
+To use this function the pipeline has to load the shared library via annotation at the beginning of the script.
+
+<h4>Parameters</h4>
+<pre>
+ - namespace: The name of the projects to generate the base values.
+ - gitRepo: The repository where the Unit-of-Work is located
+    Format:
+      - ssh://.../<project>/<repo>
+      - /<project>/<repo>
+ - gitTag: The tag or branch of the Unit-of-Work to deploy (both are applicable) 
+ - gitUser: The username for the repository
+ - gitPass: The password for the repository
+ - secretName: The name of the secret for the repository - only for non-production deployment
+ - isUow2: Optional, can bve set to false, if uow v1 should be handled
+</pre>
+
+<h4>Examples</h4>
+
+### Run with custom configuration
+<pre>
+@Library('six-jenkins-shared-library') _
+
+....
+
+uow2helm('ssh://git@stash.six-group.net:22/opspoc/pipeline-blueprint-spring-boot.git', '0.0.1', 'bitbucket-secret')
+</pre>

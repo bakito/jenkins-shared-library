@@ -1,0 +1,68 @@
+{
+  "undeployments": [
+    {
+      "name": "test-application",
+      "deploymentconfig": {
+        "name": "test-application"
+      },
+      "services": [
+        {
+          "name": "test-application"
+        }
+      ],
+      "routes": [
+        {
+          "name": "test-application"
+        }
+      ],
+      "configmaps": [
+        {
+          "name": "test-application"
+        }
+      ],
+      "persistentvolumes": [
+        {
+          "name": "test-application"
+        }
+      ],
+      "imagestreams": [
+        {
+          "name": "test-application"
+        }
+      ]
+    }
+  ],
+  "deployments": [
+    {
+      "name": "test-application",
+      "deploymentconfig": {
+        "path": "test/testdata/deploymentconfig.yaml"
+      },
+      "services": [
+        {
+          "path": "test/testdata/service.yml"
+        }
+      ],
+      "routes": [
+        {
+          "path": "test/testdata/route.yaml"
+        }
+      ],
+      "configmaps": [
+        {
+          "path": "test/testdata/configmap.json"
+        }
+      ],
+      "persistentvolumes": [
+        {
+          "path": "test/testdata/persistentvolume.yaml"
+        }
+      ],
+      "imagestreams": [
+        {
+          "path": "test/testdata/imagestream.yaml"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Run multibranch builds by use of https://plugins.jenkins.io/generic-webhook-trigger/
+
+runWithGenericTrigger(webhookToken: "<a-token>>", branchFilterExpression: '^\\b(?!refs\\/heads\\/master\\b).+', bitbucketCredentials: <bitbucket-credentialsId-to-enable-bitbucket-notification>) { co ->
+    node() {
+        // checkout the triggering branch
+        co.checkout()
+
+        // your work here
+        sh 'ls -alh'
+    }
+}

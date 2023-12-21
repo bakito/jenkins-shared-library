@@ -1,0 +1,10 @@
+{
+  "kind": "ConfigMap",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "test-application"
+  },
+  "data": {
+    "test.key": "foo"
+  }
+}

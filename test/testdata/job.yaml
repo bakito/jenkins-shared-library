@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: test-application
+spec:
+  parallelism: 1
+  completions: 1
+  template:
+    metadata:
+      name: test-application
+      labels:
+        parent: test-application
+    spec:
+      containers:
+        - name: test-application
+          image: artifactory.six-group.net/sdbi/six-rhel7:latest
+          command:
+            - /bin/sh
+      restartPolicy: OnFailure

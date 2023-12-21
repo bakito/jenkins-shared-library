@@ -1,0 +1,38 @@
+<pre>
+# Archive (.tar.gz, zip, gzip) example:
+globalTool(
+          name: 'zulu8',
+          homeVariablePrefix: 'JAVA',
+          url: 'opensource-generic-release-local/openjdk/8.0.222/zulu8.40.0.20-sa-jdk8.0.222-linux_x64.tar.gz',
+          subdir:'zulu8.40.0.20-sa-jdk8.0.222-linux_x64'
+          )
+
+# Executable example:
+globalTool(
+          name: "helmfile-v0.142.0",
+          homeVariablePrefix: 'HELMFILE',
+          url: "opensource-generic-release-local/helmfile/v0.142.0/helmfile_linux_amd64",
+          binDir: '',
+          asFileName: 'helmfile'
+          )
+
+</pre>
+
+<h4>Features</h4>
+Defines a global available tool which can be used within a pipeline.
+The tool ist installed automatically once it is used. If used within a jenkins slave image the install location can be set into a persistent volume to reuse previous installations.
+
+Installed tools are configured in the jenkins 'Global Tool Configuration' under 'Custom tool'.
+
+<h4>Parameters</h4>
+<pre>
+- name:               The name of the tool (required)
+- url:                The URL to download the tool from (required)
+- archiveSubdir:      The subdirectory of the tool within its archive. (default <empty>)
+- asFileName:         The downloaded executable will be rename to this name.  (Required only if the tool is NOT a gzip / tar.gz / zip)
+- homeVariablePrefix: The prefix of that will be used to define the XXX_HOME variable for this tool. (required)
+- addToPath:          Define where to add the binary directory to the PATH variable (default: true)
+- binDir:             The path of the binary directory within the tool home directory.
+- additionalVars:     Define additional environment variables that will be created for this tool as Map. Key of the map is the name for the variable, key is the path relative to the tool home. ( [JAVA_FOO:"foo"])
+- replace:            If set to true, the tool installation is always replaced in the jenkins configuration.
+</pre>

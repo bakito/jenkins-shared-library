@@ -1,0 +1,21 @@
+kind: List
+apiVersion: v1
+metadata:
+  labels:
+    app: test-application
+    six-application: test-application
+items:
+  - apiVersion: v1
+    kind: Route
+    metadata:
+      labels:
+        app: test-application-2
+      name: test-application-2
+    spec:
+      port:
+        targetPort: 8080-tcp
+      to:
+        kind: Service
+        name: test-application
+        weight: 100
+      wildcardPolicy: None

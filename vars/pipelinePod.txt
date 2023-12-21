@@ -1,0 +1,44 @@
+<pre>
+@Library('six-jenkins-shared-library') _
+
+pipelinePod(String imageName, Closure setup (optional), Closure body)
+</pre>
+
+<h4>Features</h4>
+Executes the body within a given docker image.
+
+<h4>Important</h4>
+To use this function the pipeline has to load the shared library via annotation at the beginning of the script.
+
+<h4>Parameters</h4>
+<pre>
+ - imageName: Name if the docker image to be executed.
+ - setup: A closure to overwrite / extend the configuration of the pod. The setup closure ist optional. The available parameters can be seen here: https://stash.six-group.net/projects/SDBI/repos/jenkins-shared-library/browse/src/com/six_group/jenkins/PipelinePod.groovy
+ - body: the Body closure. This closure is executed within the pod.
+</pre>
+
+<h4>Examples</h4>
+
+### Run with default configuration
+<pre>
+@Library('six-jenkins-shared-library') _
+
+....
+
+pipelinePod('artifactory.six-group.net/sdbi/six-rhel7') {
+    sh 'ps -aux'
+}
+</pre>
+
+<h5>Run with custom configuration</h5>
+<pre>
+@Library('six-jenkins-shared-library') _
+
+....
+
+pipelinePod('artifactory.six-group.net/sdbi/six-rhel7', { pp ->
+    pp.command = 'cat'
+}) {
+    sh 'ps -aux'
+}
+</pre>

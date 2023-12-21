@@ -1,0 +1,22 @@
+<h4>get the current job's git repository path</h4>
+<pre>
+currentGit.repo()
+</pre>
+
+<h4>get the current job's git branch</h4>
+<pre>
+currentGit.branch()
+</pre>
+
+<h4>get the git revision of the current build</h4>
+<pre>
+currentGit.revision()
+</pre>
+
+<h4>Input Parameters</h4>
+@param: (optional) shortRevision: define whether to use the short revision or not, default: true
+
+<h4>get the git tags for the current revision as list.
+currentGit.tag()
+</pre>
+

@@ -1,0 +1,35 @@
+Allows to set build discarder, cron for scm poll and cron trigger
+
+<h4>Usage</h4>
+
+<pre>
+defaultProperties(numberToKeep: 5, cronPollSCM: 'H 6 * * 1-5', cronTrigger: 'H 6 * * 1-5')
+<pre>
+Applies the the default properties
+ - buildDiscarder: numberToKeep (default 10)
+ - cronPollSCM: 'H 6 * * 1-5'
+ - cronTrigger: 'H 6 * * 1-5'
+
+
+
+<pre>
+defaultProperties()
+</pre>
+Applies the the default properties
+ - buildDiscarder: numberToKeep (default 5)
+
+
+<pre>
+defaultProperties(10)
+</pre>
+Applies the the default properties
+ - buildDiscarder: numberToKeep (default 10)
+
+<pre>
+defaultProperties(10, 'H 6 * * 1-5')
+</pre>
+Applies the the default properties
+ - buildDiscarder: numberToKeep (default 10)
+ - cronPollSCM: 'H 6 * * 1-5'
+
+

@@ -1,0 +1,24 @@
+<pre>
+triggeredOnStartup()
+</pre>
+
+<h4>Features</h4>
+Checks wheter the current build was automatically triggered by th SIX jenkins startup hook.
+
+Return: true if the build was automatically triggered.
+
+params:
+
+<pre>
+ - setAborted: optional - if set to true, the current build result is set to ABORTED (default: true)
+ - message: optional - define an custom message
+</pre>
+
+<h4>Usage</h4>
+
+<pre>
+// after the job initialisation insert the following
+if (triggeredOnStartup()) {
+    return
+}
+</pre>

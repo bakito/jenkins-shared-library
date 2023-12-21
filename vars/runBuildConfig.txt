@@ -1,0 +1,29 @@
+<pre>
+runBuildConfig(buildConfig: '<buildConfigName>')
+</pre>
+
+<pre>
+runBuildConfig(buildConfig: '<buildConfigName>', { bc ->
+  // By defining an optional closure the buildconfig object can be modified before the build is started
+  // The build config object is provided as single parameter for the closure
+  // When the closure is defined, the build config is saved by this shared function
+})
+</pre>
+
+<h4>Features</h4>
+<ul>
+ <li>Starting default BuildConfigs</li>
+ <li>Starting BuildConfigs of type Binary (--from-dir) (https://docs.openshift.com/container-platform/3.11/dev_guide/builds/build_inputs.html#binary-source)</li>
+ <li>Modification of the BuildConfigs before the build (E.g: to change the target image tag)</li>
+ <li>Print the log of the build into jenkins build log</li>
+ <li>Wait until the BuildConfig has finished</li>
+ <li>Verify if the build was successful and fail the jenkins build if not successful</li>
+</ul>
+
+<h4>Parameters</h4>
+<ul>
+ <li>buildConfig          : required - the name of the BuildConfig to be executed</li>
+ <li>dir                  : optional - the directory containing all files to be used for the binary build (default '.')</li>
+ <li>namespace            : optional - the namespace to run the build in. (default '' == current namespace)</li>
+ <li>timeout              : optional - the timeout in minutes to wait for the build termination (default 1)</li>
+</ul>
