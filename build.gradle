@@ -28,7 +28,7 @@ dependencies {
     implementation group: 'org.csanchez.jenkins.plugins', name: 'kubernetes', version: '4174.v4230d0ccd951'
 
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.8.0'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.9.0'
     testImplementation group: 'com.lesfurets', name: 'jenkins-pipeline-unit', version: '1.19'
     testImplementation group: 'javax.servlet', name: 'servlet-api', version: '2.5'
     testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.3-groovy-4.0'
