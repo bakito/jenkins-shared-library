@@ -25,7 +25,7 @@ dependencies {
     implementation group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '642.v737c34dea_6c2'
     implementation group: 'com.cloudbees.jenkins.plugins', name: 'custom-tools-plugin', version: '0.8'
     implementation group: 'com.openshift.jenkins.plugins', name: 'openshift-client', version: '1.1.0.420.v8817277c1990'
-    implementation group: 'org.csanchez.jenkins.plugins', name: 'kubernetes', version: '4174.v4230d0ccd951'
+    implementation group: 'org.csanchez.jenkins.plugins', name: 'kubernetes', version: '4193.vded98e56cc25'
 
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.8.0'
