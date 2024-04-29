@@ -22,7 +22,7 @@ dependencies {
   testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.10.2'
     
 
-    implementation group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '642.v737c34dea_6c2'
+    implementation group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '677.vdc9d38cb_254d'
     implementation group: 'com.cloudbees.jenkins.plugins', name: 'custom-tools-plugin', version: '0.8'
     implementation group: 'com.openshift.jenkins.plugins', name: 'openshift-client', version: '1.1.0.424.v829cb_ccf8798'
     implementation group: 'org.csanchez.jenkins.plugins', name: 'kubernetes', version: '4199.va_1647c280eb_2'
