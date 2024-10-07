@@ -19,7 +19,7 @@ dependencies {
     
   implementation group: 'commons-cli', name: 'commons-cli', version: '1.9.0'
 
-  testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.11.1'
+  testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.11.2'
     
 
     implementation group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '679.v6288482e873c'
