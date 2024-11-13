@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'org.apache.groovy', name: 'groovy', version: '4.0.23'
+    implementation group: 'org.apache.groovy', name: 'groovy', version: '4.0.24'
     implementation group: 'javax.servlet', name: 'servlet-api', version: '2.5'
 
     
