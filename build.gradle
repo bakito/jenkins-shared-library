@@ -1,6 +1,6 @@
 plugins {
     id 'groovy'
-    id 'org.jenkins-ci.jpi' version '0.51.0'
+    id 'org.jenkins-ci.jpi' version '0.52.0'
 }
 
 group 'com.six_group.ocp'
